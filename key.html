@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div id="key"></div>
+
+    <script>
+      // ------------ Punto 3: Key -----------
+
+      let keyDiv = document.getElementById("key");
+
+      document.addEventListener("keydown", function (event) {
+        let color;
+
+        if (event.key === "a") {
+          keyDiv.style.backgroundColor = "pink";
+        } else if (event.key === "s") {
+          keyDiv.style.backgroundColor = "orange";
+        } else if (event.key === "d") {
+          keyDiv.style.backgroundColor = "lightblue";
+        }
+      });
+
+      // ------- crear div
+
+      document.addEventListener("keydown", function (event) {
+        let newDiv;
+
+        if (event.key === "q") {
+          newDiv = document.createElement("div");
+          newDiv.classList.add("created-div");
+          newDiv.textContent = "Nuevo Div Creado";
+
+          document.body.appendChild(newDiv);
+          document.querySelector(".created-div").style.backgroundColor =
+            "purple";
+        } else if (event.key === "w") {
+          newDiv = document.createElement("div");
+          newDiv.classList.add("created-div");
+          newDiv.textContent = "Nuevo Div Creado";
+
+          document.body.appendChild(newDiv);
+          document.querySelector(".created-div").style.backgroundColor = "grey";
+        } else if (event.key === "e") {
+          newDiv = document.createElement("div");
+          newDiv.classList.add("created-div");
+          newDiv.textContent = "Nuevo Div Creado";
+
+          document.body.appendChild(newDiv);
+          document.querySelector(".created-div").style.backgroundColor =
+            "#804000";
+        }
+      });
+    </script>
+  </body>
+</html>

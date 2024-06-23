@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4 Colores</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="caja" id="caja1"></div>
+    <div class="caja" id="caja2"></div>
+    <div class="caja" id="caja3"></div>
+    <div class="caja" id="caja4"></div>
+
+    <script>
+      function cambiarColor(elementId) {
+        const caja = document.querySelector("#" + elementId);
+        caja.style.backgroundColor = "black";
+      }
+
+      document.querySelector("#caja1").addEventListener("click", function () {
+        cambiarColor("caja1");
+      });
+
+      document.querySelector("#caja2").addEventListener("click", function () {
+        cambiarColor("caja2");
+      });
+
+      document.querySelector("#caja3").addEventListener("click", function () {
+        cambiarColor("caja3");
+      });
+
+      document.querySelector("#caja4").addEventListener("click", function () {
+        cambiarColor("caja4");
+      });
+    </script>
+  </body>
+</html>
